@@ -1,0 +1,3 @@
+get_filename_component(FastDelegate_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(FastDelegate_INCLUDE_DIRS "@INCLUDE_INSTALL_DIR@")
+message(STATUS "FastDelegate found. Headers: ${FastDelegate_INCLUDE_DIRS}")
