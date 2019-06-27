@@ -1,3 +1,8 @@
 get_filename_component(FastDelegate_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 set(FastDelegate_INCLUDE_DIRS "@INCLUDE_INSTALL_DIR@")
-message(STATUS "FastDelegate found. Headers: ${FastDelegate_INCLUDE_DIRS}")
+#message(STATUS "FastDelegate found. Headers: ${FastDelegate_INCLUDE_DIRS}")
+
+add_library(FastDelegate::FastDelegate INTERFACE IMPORTED GLOBAL)
+set_target_properties(FastDelegate::FastDelegate PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "@INCLUDE_INSTALL_DIR@/FastDelegate"
+)
